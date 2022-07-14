@@ -1,0 +1,320 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Uber1" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="824,4012" sap2010:WorkflowViewState.IdRef="Uber1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="38">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Uber1" sap:VirtualizedContainerService.HintSize="550.4,3947.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="inuber" />
+      <Variable x:TypeArguments="x:String" Name="ubergo" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="508.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Started reading uber data&quot;]" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="508.8,262.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="dependancy\output\Route Tracker-Output.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,152.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[inuber]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Output - Uber">
+              <ui:ExcelReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ExcelReadRange.Range>
+            </ui:ExcelReadRange>
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="508.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;reading uber data from excel completed&quot;]" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Book an Uber ride using your web browser on your desktop or phone" sap:VirtualizedContainerService.HintSize="508.8,2557.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="78a98963-d422-4576-845d-b2ee5e39870e" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="475.2,2340.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Getting uber data&quot;]" />
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[inuber]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="433.6,2114.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,1996.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="premier" />
+                      <Variable x:TypeArguments="x:String" Name="uberxl" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="3" DelayBefore="3" DisplayName="Type Into  pickup location" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="78a98963-d422-4576-845d-b2ee5e39870e" Text="[row(&quot;From&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://m.uber.com/looking" DesignTimeRectangle="249, 375, 388, 55" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='_css-jPRHZh' aaname='' /&gt;" Guid="f3cd02de-b1ef-46c8-a290-738d9497129b" ImageBase64="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" InformativeScreenshot="28b8b85baa649f302a775f5599aa5c0d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Book an Uber ride using your web browser on your desktop or phone' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="219, 392, 20, 20" ElementType="Icon" FriendlyName="'Circle small'" FullSelectorArgument="&lt;webctrl tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='svg' type='' class='' aaname='' check:text='Circle small' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACmSURBVEhL7ZJBCsQgDEU9gd5AD6gn8UTeyBu4zfADKUXSxhkY2oWLByHW/zTWjTHon2yByRaYvEvQe2e0tSuWBK01SimRc45BjZ727YwpQJAEz6xITEGMkcO891RrZVCjh5toe87cCjBvOS2CpZ9zPvrWmzwrADKiEAKVUhjU6GFN23Pm+UcGCJKbANQr4WBJIGDe1sxnvhL8whaYvEsgv6m2pjPoA+QJMmb7w28mAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2" DelayMS="1" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e3d2a09d-00eb-4759-844f-807bc9e5d7ab" InformativeScreenshot="44d9e905a9b6c0e0ef01e8a57b6494ce" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;div' parentid='wrapper' tag='DIV' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into destination" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="78a98963-d422-4576-845d-b2ee5e39870e" Text="[row(&quot;To&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://m.uber.com/looking" DesignTimeRectangle="249, 455, 405, 55" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl idx='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='text' tag='INPUT' class='_css-kzEJmN' aaname='' /&gt;" Guid="16af0337-9fad-4fde-8114-e94562480511" ImageBase64="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" InformativeScreenshot="5ff6f5922d8158af12f7b8907e02af2f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Book an Uber ride using your web browser on your desktop or phone' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="219, 472, 20, 20" ElementType="Icon" FriendlyName="'Square small'" FullSelectorArgument="&lt;webctrl idx='2' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='svg' class='' aaname='' check:text='Square small' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABaSURBVEhL7dLBCUAhCIBh91/CbRzHFQoCoUBTHj1K6vBdFPkvAjOXKABotJ3lssAXL+DaGyCiEO1WuAF5TUueACIOfgnIPG+gtzxgOT8Qod2KaWCFF3BlD3Cpk7nSEvwJ6AUAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="1" DelayMS="1" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2cb25275-a8b4-4473-9a41-3de66671d7d2" InformativeScreenshot="7e8329c5dd797daf4a9930fbfd9abfca" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;div' parentid='wrapper' tag='DIV' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <uix:NGetText DelayAfter="1" DelayBefore="3" DisplayName="Get Text 'UberGo'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="78a98963-d422-4576-845d-b2ee5e39870e" Version="V1">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://m.uber.com/looking?drop%5B0%5D=%7B%22latitude%22%3A12.9109375%2C%22longitude%22%3A77.6321875%2C%22addressLine1%22%3A%22WJ6J%209V%20Bengaluru%22%2C%22addressLine2%22%3A%22Karnataka%2C%20India%22%2C%22id%22%3A%22GhIJZmZmZmbSKUARKVyPwnVoU0A%22%2C%22provider%22%3A%22google_places%22%2C%22index%22%3A0%7D&amp;pickup=%7B%22latitude%22%3A13.2001875%2C%22longitude%22%3A77.70943749999999%2C%22addressLine1%22%3A%226P25%203Q%20Bengaluru%22%2C%22addressLine2%22%3A%22Karnataka%2C%20India%22%2C%22id%22%3A%22GhIJ0SLb-X5mKkARlUOLbGdtU0A%22%2C%22provider%22%3A%22google_places%22%2C%22index%22%3A0%7D&amp;vehicle=2007" DesignTimeRectangle="544, 586, 99, 30" ElementType="Text" FriendlyName="'₹1,253.30'" FullSelectorArgument="&lt;webctrl aaname='₹1,253.30' parentid='wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='wrapper' tag='DIV' type='' class='_css-dZTBoz' /&gt;" Guid="b33d6f61-68c5-4280-bd48-4cc40e8643c3" InformativeScreenshot="bb6d4129b1b7698c66e8dd0f18cd1cfb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Book an Uber ride using your web browser on your desktop or phone' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="313, 586, 81, 30" ElementType="Text" FriendlyName="'UberGo'" FullSelectorArgument="&lt;webctrl aaname='UberGo' parentid='wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='UberGo' parentid='wrapper' tag='DIV' type='' class='_css-euhGa-D _css-dZTBoz' check:innerText='UberGo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAAiCAYAAAAu0pUjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARZSURBVGhD7ZjLK31RFMfvP2BioIyMJAPJQIoJExTlEWZeA5GUMKIMUGZkJMlEiAFKiRJFGVAGlO6VgUeIJHmF8li/vsvZx77HPu697tn9fvntb62Ou/c6Z6/1OfusvTcfGXkuA1WDDFQNMlA1yEDVIANVgwxUDTJQNchTqHt7e5Samko+n4/W19et1v9PQVDHx8cZCMAAkJvc4P2rUJ+fn2lxcZEqKiooISGB48O1urqalpaWuN9L/XqoR0dHVFJSwjG5Gfrh55V+NdSLiwsqKirieGJjY6mrq4u2trbo6uqKNjc3qbm5mdvRDz/4e6FfC/X19ZU6Ozs5Fnzqq6urVs+n3t/faWVlxS4JbW1tnpQCrVAPDw+prq6OZwOstraWtre3ORmVjo+Pqaenh5KSkvgZGRkZNDg4SA8PD5bHhx4fH6m+vp59uru76fz8nMeJiYnhdvTLsQwPD7uOifaxsTFKT0+n6elpJVRnXLi2trZyfippg4pZIoKQDYlPTEx8SXJtbU3pD6usrKTLy0vLMxhqY2MjlZeX274C6tzcHP8OlQuEWQ1T6bu4MMMXFha+5KINKqyqqoprF4Bg8OzsbOXz8cazsrKC7kF9m5mZsZ/X29trJy5DhWGWzc/P8zg3NzecJPzRl5eXxzX0J5Ljys3NpeXlZY4L18LCQm5XsdIGFZ+j87OVg+zv77daiUZGRrgNM+76+tpq/RAAx8fHU2Zmpr1Cy1Axnt/v53ZZKAvoFzNX1v39PYN2GsZ+eXmxvD7jysnJodPTU6v1Qyg5BQUF3N/X1xc0W7VBxefnFAZGbUK/SPbp6Yk/YbQNDQ1Znp9CoiJ4MZYMtb29XfnpfgdV9DlNzlseAzE7P3EI8aIf5enu7s5q1bxQqSTGKCsr409VhhbKpqam+BlywgCkUrRQ5bgQs0oiF2eJ+WtQRSAw/I22UCaSCwdqJDVVxC3nLccVFVSsdHBKSUmhQCBgtX7Vzs4OJSYmsq+XMxVbHwFaZWLGhQM1ktUfBwLUbdnXs5kqw0KRVgm1BcnDB+YGFWdqp0LVVLfa5VQ4UOVYBgYGXJ+Ldiw08JOhymNEVVOxWtfU1LAjNt6qVRVvFX3wgblB/cnqjz7nhvrt7Y02NjaCgg4HKlbxjo4O9sF+EicnJxj8lk9UMlTIk9UfAiR5kNHRUTo5OaGDgwMGgY1wXFwcb+Lh4wYVJu9TsbfDXg/tycnJtLu7a90VDBt7WexpcQ/ubWpq4rEaGhro9vaW/cOBCu3v79sTwHn2xxW/0V5aWspfqBOqJ/tUCMSx6RZgnYZBZmdnbXhuUJGsVycqJD45OWnfEy5UCC9PgFEZ/qkCwIhbBSjqE5UsvCWcb8UD09LSeJrjLcvw3KCiHc+I5Ox/dnbG9UuMiaBbWlq4DMn3RAIVQhnCi8zPz+eXCisuLub/seKsL+JWQYWiOvsbeSMDVYMMVA0yUDXIQNUgA1WDDFQNMlA9F9EfIJDf/+1zbVQAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <uix:NGetText.Text>
+                        <OutArgument x:TypeArguments="x:String">[ubergo]</OutArgument>
+                      </uix:NGetText.Text>
+                    </uix:NGetText>
+                    <uix:NGetText DelayBefore="2" DisplayName="Get Text 'Premier'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="78a98963-d422-4576-845d-b2ee5e39870e" Version="V1">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://m.uber.com/looking?drop%5B0%5D=%7B%22latitude%22%3A12.9109375%2C%22longitude%22%3A77.6321875%2C%22addressLine1%22%3A%22WJ6J%209V%20Bengaluru%22%2C%22addressLine2%22%3A%22Karnataka%2C%20India%22%2C%22id%22%3A%22GhIJZmZmZmbSKUARKVyPwnVoU0A%22%2C%22provider%22%3A%22google_places%22%2C%22index%22%3A0%7D&amp;pickup=%7B%22latitude%22%3A13.2001875%2C%22longitude%22%3A77.70943749999999%2C%22addressLine1%22%3A%226P25%203Q%20Bengaluru%22%2C%22addressLine2%22%3A%22Karnataka%2C%20India%22%2C%22id%22%3A%22GhIJ0SLb-X5mKkARlUOLbGdtU0A%22%2C%22provider%22%3A%22google_places%22%2C%22index%22%3A0%7D&amp;vehicle=2007" DesignTimeRectangle="549, 750, 97, 30" ElementType="Text" FriendlyName="'₹1,501.33'" FullSelectorArgument="&lt;webctrl aaname='₹1,501.33' parentid='wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='wrapper' tag='DIV' type='' class='_css-dZTBoz' /&gt;" Guid="2e9a9d58-e93b-490a-a9c8-0e70b5e39621" InformativeScreenshot="12044c75c5c9bf0fc24ac4a431b9319c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Book an Uber ride using your web browser on your desktop or phone' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="309, 750, 83, 30" ElementType="Text" FriendlyName="'Premier'" FullSelectorArgument="&lt;webctrl aaname='Premier' parentid='wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Premier' parentid='wrapper' tag='DIV' type='' class='_css-euhGa-D _css-dZTBoz' check:innerText='Premier' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAAiCAYAAAAqJ0UeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARZSURBVGhD7ZjLK31RFMf9AyZmRkaSgQwMFBlIMaAYMEMMJGZi4JEBiShSJiIGHjOKkRJKeeUxQEnkkUckJOSRx/r1Xc6+v3WOc+51+/327f767W+tuGvtve4+n73249wIMtImA1ejDFyNMnA1ysDVKANXowxcjTJwNeq/gnt5eUkFBQWUkZFB+/v7llefbHCvr68pKyuLIiIiXC0uLo7a2tro6urK6vFvaWxszPcsIyMjllefgoKrLDk5mXZ2dqxe/45U5ebk5NDBwYHl1SdPuH19ffxZGQY2Pj5OiYmJHMcgb29vrZ5GbvKE67VsZmdnKTo6miIjI2lmZsbyGrkpaLio1uzsbG7T29vLvt3dXV9FLyws0OLiIqWlpX3L8/HxQUtLS1RaWkpRUVE8QXl5eTQ3N8cxKWfOk5MTKisr434xMTHU0NBANzc33Pbz85MnHQcV2mPbGhgYoJeXF44rOXM6hefv6enh/mjj74xpbm7mNuXl5byqGxsbeWzgpxQ03Lu7O8rPz+c2XV1d7JODbm9v54fH/zLP29sbdXR0MFAVUwYfHgptlGTO/v5+3wNLy83NpYuLCxodHXXNW1tbawPsDy5iqamp33LAMjMzaW9vz2r5JQW3sLCQJ121/SO4m5ubFB8fz20mJyfZJwcNKy4u5nbI9/T0xG0mJiYYAGYX1XB4eMjW0tLCfmw18/Pz3BaSOTFZNTU1fH2CVVVV+b4LFYMDCmfE6ekp58BnxJBXbl1ecLEacYbAj77og2rEX4CFHxWqngVScGGo8MHBQe4jz6Efw8XSw+ypLSE9PZ3Ozs44JgeNWXx8fGS/Ej6XlJRwvLu7m3Mp4f/Ozk6OAdrr6yv7Zc76+npbVSOfrJbh4WFbzqOjI18Vtra2Wl5vuICIiUAf9JVCAWDVYPLX19ct72+48GNLcpMnXH+GSpqamrJ62Qc9PT1teX8L1ZaUlESxsbFc0U4tLy/zw+G7MQZI5pQVrYTJRywlJYWOj48t75fe39+prq6O47LivOBiAuBDH/SVen5+psrKSo7LglNwi4qK6P7+3vLaFTRcLJuNjQ1bpXgNWknBc+ZyGiZAvTkFygkfYnJCpOSB4w+uhBfI5Cpwy++UJ1znPReGw0xCVfopiECGHMgFhQouYmgDXyBDTqU/gut1oLkpEAhVuQkJCbS6umqbMGk4DNTeGiq4snKxtzvHJO3h4YH7QGEDV+25AOwWd1Oo4EJqz/UHyqmwgStvC9XV1d8u9zgQVlZWbC8SoYSrbgs4qNfW1izvl7ANbm1t8X1aKmzgQuqeizYVFRV8a8C9EHdlfCdiQ0NDPsChhCvvuYjjaoexbW9vU1NTE9/NcZCfn59bPcIMrr83NBjumMijFEq4EGJeb2gYM8Yu79phBRfCEsPyV78toD0u6Hj1dQIKNVwItyH52wLGiLHi9xDnbx9BwzX6uzJwNcrA1SgDV6MMXI0ycDXKwNUoA1ebiH4BBWAemEGFPOAAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <uix:NGetText.Text>
+                        <OutArgument x:TypeArguments="x:String">[premier]</OutArgument>
+                      </uix:NGetText.Text>
+                    </uix:NGetText>
+                    <uix:NGetText DelayAfter="1" DelayBefore="2" DisplayName="Get Text 'UberXL'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="78a98963-d422-4576-845d-b2ee5e39870e" Version="V1">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://m.uber.com/looking?drop%5B0%5D=%7B%22latitude%22%3A12.9109375%2C%22longitude%22%3A77.6321875%2C%22addressLine1%22%3A%22WJ6J%209V%20Bengaluru%22%2C%22addressLine2%22%3A%22Karnataka%2C%20India%22%2C%22id%22%3A%22GhIJZmZmZmbSKUARKVyPwnVoU0A%22%2C%22provider%22%3A%22google_places%22%2C%22index%22%3A0%7D&amp;pickup=%7B%22latitude%22%3A13.2001875%2C%22longitude%22%3A77.70943749999999%2C%22addressLine1%22%3A%226P25%203Q%20Bengaluru%22%2C%22addressLine2%22%3A%22Karnataka%2C%20India%22%2C%22id%22%3A%22GhIJ0SLb-X5mKkARlUOLbGdtU0A%22%2C%22provider%22%3A%22google_places%22%2C%22index%22%3A0%7D&amp;vehicle=2007" DesignTimeRectangle="547, 667, 99, 30" ElementType="Text" FriendlyName="'₹2,136.64'" FullSelectorArgument="&lt;webctrl aaname='₹2,136.64' parentid='wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='wrapper' tag='DIV' type='' class='_css-dZTBoz' /&gt;" Guid="49a7844d-33ed-406a-9526-ec9a273f7c6b" InformativeScreenshot="bd444bf52705a7c4f6110ffd1008f14c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Book an Uber ride using your web browser on your desktop or phone' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="309, 667, 79, 30" ElementType="Text" FriendlyName="'UberXL'" FullSelectorArgument="&lt;webctrl aaname='UberXL' parentid='wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='UberXL' parentid='wrapper' tag='DIV' type='' class='_css-euhGa-D _css-dZTBoz' check:innerText='UberXL' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAiCAYAAAAjzOVkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQrSURBVGhD7ZjNK/VBFMfvP2BjoawsZSFZyMKGFAs2imy8FomdrCgLFLKQspMsvOyQraIo2bBBIcpLiCTvecnLefoev/Mzd+78nt9Vs7iPZ751uszbnfnMOTNnboScrMnBtCgH06IcTItyMC3KwbQoB9OiHEyLsgrz6emJmpqaKBKJUHd3t1f6/ygK5srKCoOA4e8gXV1dUXFxMbebnJz0ShMH5vb2NuXm5vI8Kioq6Pr62quJ1vv7Ow0MDHC7tLQ0Wlpa4nKsCWVYI9Yar34lTGhubo6SkpJ4LiMjI/T5+enVfAtrBES0AVTAhRxMTS8vL9TW1sZzycrKYm9VBW+F16K+rKyMLi8vvRoH06jDw0PKy8vj+TQ2NtLj4yOXw0uHhoa4HJ65trbG5aKEhInJY9Lp6elcVlhYSNPT0+w1JmHc4eFh/7xDv76+viivEWF8tMH3XVxcUGdnJyUnJ8cAmJ+f53CHTU1NMciNjQ3KyMjg/piffgQkHMy6ujo/jHRraWnxvUS0u7vre5FuRUVFtLe357X8ksCsqqpir5O2OoC3tzfq6OjgOmwSvLCmpob/D7qcEg4mLCcnh2ZnZ9lz4A3Nzc1+ndpPPb9KS0tpYWGB++ATIFGOcTG+SGDC4MFjY2PcB2N9fHx4rb50fn5OJSUl3DY1NZU/4ZmYk0kJB9N06KuXQnl5Od3e3nI5oCEM4Zk451QdHBywRwHC+vq6V/oNE+WLi4teabDQRkDCgm54KOFgtra20uvrq1fzLYwLcICN0IZ6e3u5T3t7u5+eiJ6fn/lY0L9LYFZXV9P9/b1XGqyzszN/zpmZmbS1teXVxCrhYGKxJgEgQIqnqbDCDNBFAlMPf5Nwbvb09ESNZTq3Rf8cTPkOtU+YqWP+BKaEOCKitraWP9F3YmLCGOpWYO7s7HAIYKDl5WWvNFYImfz8fG5n0zNx62LyQfbw8OCNEj/M09NTKigo4Lb4npubG/92N53rkBWYKiTkbfr5JZLcDe2CYJrOPwjeGHRmxuNlonhg6mmRgFMBI026u7vjcpEVmFg8IGIg9eGv6ujoyE8zYEEwTbsedpubXiMIw83NTU5vVMUD05Swi1SH0BN3KzAhJMfyAsHiBgcHOT05OTmh8fFxzh1TUlL8iQTBhKl5Jm5P3PBSNzo66vWKzjOxCTjLpE9XVxe/bJB/InJEYTCDnpIi1Wv1TRSYeLHt7+/7x4xuek4bAxNaXV3lRWFA3ZAg40kYdgE1NDRQZWVlVF8x002KkA96AWHj8KsOAIj+BjPsRw6RGu7qjx0CM8x0zzXChDAw3sXZ2dncERCxk8fHxzxAGEws9qdvc4S9+jaHR9bX1/Pm6q+aIJgI15mZGT9ygm5skRru/f39vGHWYTr9XA6mRTmYFuVgWpSDaVEOpkU5mBblYFoT0R9Yxh9ahRHHyAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <uix:NGetText.Text>
+                        <OutArgument x:TypeArguments="x:String">[uberxl]</OutArgument>
+                      </uix:NGetText.Text>
+                    </uix:NGetText>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;ubergo&quot;+ubergo+&quot; premier&quot;+premier+&quot; uberxl&quot;+uberxl]" />
+                    <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Object">[row("UberGo")]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Object">[ubergo]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Object">[row("Premier")]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Object">[premier]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Object">[row("UberXL")]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Object">[uberxl]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Object">[row("Aggregator")]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Object">["Uber"]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABPSURBVDhPpcuxDQAgEMNA9l/6obYjRERxjZWsmfkSYyPGRowNh5NutFfAgbRXwIG0V8CBtFfAgbRXwIG0V8CBtFfAgbRnaMXYiLER47tZG/sxfZ+R/hxrAAAAAElFTkSuQmCC" InformativeScreenshot="a6091cad52a1e4764d35848e374de8ab.png" Selector="&lt;html app='chrome.exe' title='Book an Uber ride using your web browser on your desktop or phone' /&gt;" Url="https://m.uber.com/looking" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="508.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;data extraction completed for uber&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="508.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;uber data writing to excel&quot;]" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="508.8,290.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="dependancy\output\Route Tracker-Output.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelWriteRange AddHeaders="True" DataTable="[inuber]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Output - Uber" StartingCell="A1" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="508.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;successfully completed -uber &quot;]" />
+  </Sequence>
+</Activity>

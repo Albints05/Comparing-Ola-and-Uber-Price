@@ -1,0 +1,307 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Ola1" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="824,4136" sap2010:WorkflowViewState.IdRef="Ola1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="38">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Ola1" sap:VirtualizedContainerService.HintSize="550.4,4071.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="inola" />
+      <Variable x:TypeArguments="x:String" Name="mini" />
+      <Variable x:TypeArguments="x:String" Name="suv" />
+      <Variable x:TypeArguments="x:String" Name="sedan" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="508.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;reading ola input&quot;]" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="508.8,262.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="dependancy\output\Route Tracker-Output.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,152.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[inola]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Output - Ola">
+              <ui:ExcelReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ExcelReadRange.Range>
+            </ui:ExcelReadRange>
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="508.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;completed reading ola input&quot;]" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome" sap:VirtualizedContainerService.HintSize="508.8,2681.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="62179bf1-6f90-46a9-90b4-06b39ba44ef9" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="475.2,2464.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;extracting data fom ola&quot;]" />
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[inola]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="433.6,2237.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,2120" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="1" DisplayName="Type Into 'Enter pickup location'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="62179bf1-6f90-46a9-90b4-06b39ba44ef9" Text="[row(&quot;From&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://book.olacabs.com/" DesignTimeRectangle="102, 257, 552, 50" ElementType="Text" FriendlyName="'Enter pickup location'" FullSelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-LOCATION-INPUT' /&gt;&lt;webctrl aaname='Enter pickup location' shadowhostid='' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-LOCATION-INPUT' /&gt;&lt;webctrl aaname='Enter pickup location' shadowhostid='' tag='DIV' type='' class='right h-full text placeholder' check:innerText='Enter pickup location' /&gt;" Guid="100709ce-b42a-4671-a4a1-ee0c537ae008" ImageBase64="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" InformativeScreenshot="ffa5a23c0542291868e8bcea85478fe6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Book Cabs Nearby at Best Price | Hire Taxi Nearby Online at Olacabs.com' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="1" DelayMS="2" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5aff1687-cc4f-45b6-9b1e-92b3d8cd6778" InformativeScreenshot="e7e7a81da54e61580a027a8559a70490" Selector="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-MODAL' /&gt;&lt;webctrl shadowhostid='ola-location' tag='OLA-LOCATION' /&gt;&lt;webctrl css-selector='div&amp;gt;div&amp;gt;div' idx='12' parentid='modalContent' shadowhostid='' tag='DIV' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into To" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="62179bf1-6f90-46a9-90b4-06b39ba44ef9" Text="[row(&quot;To&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://book.olacabs.com/?pickup_name=6P25%2B3Q%20Bengaluru%2C%20Karnataka%20India&amp;lat=13.2001875&amp;lng=77.70943749999999" DesignTimeRectangle="102, 317, 552, 50" ElementType="Text" FriendlyName="'Search for'" FullSelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME-LOCAL' /&gt;&lt;webctrl shadowhostid='' tag='OLA-LOCATION-INPUT' /&gt;&lt;webctrl idx='3' isleaf='1' shadowhostid='' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME-LOCAL' /&gt;&lt;webctrl shadowhostid='' tag='OLA-LOCATION-INPUT' /&gt;&lt;webctrl type='' isleaf='1' shadowhostid='' tag='DIV' class='right h-full text placeholder' aaname='Search for a locality or landmark' check:innerText='Search for a locality or landmark' /&gt;" Guid="4d68c21d-2013-47fc-9dd5-7610f45f8331" ImageBase64="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" InformativeScreenshot="d5526f01946b8e039481a43f7c1eed5a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Book Cabs Nearby at Best Price | Hire Taxi Nearby Online at Olacabs.com' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="4" DelayMS="5" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5c4fa3b2-994d-4652-b229-dcc24fddd669" InformativeScreenshot="db93f6e9ad39c8d541ed2a6fc548ef2d" Selector="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-MODAL' /&gt;&lt;webctrl shadowhostid='ola-location' tag='OLA-LOCATION' /&gt;&lt;webctrl css-selector='div&amp;gt;div&amp;gt;div&amp;gt;div' idx='5' parentid='modalContent' shadowhostid='' tag='DIV' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <uix:NGetText DelayBefore="4" DisplayName="Get Text mini" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="62179bf1-6f90-46a9-90b4-06b39ba44ef9" Version="V1">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://book.olacabs.com/?pickup_name=6P25%2B3Q%20Bengaluru%2C%20Karnataka%20India&amp;lat=13.2001875&amp;lng=77.70943749999999&amp;drop_lat=12.9109375&amp;drop_lng=77.6321875&amp;drop_name=WJ6J%2B9V%20Bengaluru%2C%20Karnataka%20India" DesignTimeRectangle="568, 561, 54, 25" ElementType="Text" FriendlyName="'₹1060'" FullSelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME-LOCAL' /&gt;&lt;webctrl shadowhostid='' tag='OLA-CABS' /&gt;&lt;webctrl aaname='₹1060' shadowhostid='' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME-LOCAL' /&gt;&lt;webctrl shadowhostid='' tag='OLA-CABS' /&gt;&lt;webctrl shadowhostid='' tag='SPAN' type='' class='' /&gt;" Guid="e827e324-154b-4a39-9e3d-f1ee62e97b4e" InformativeScreenshot="209e65b97c12e5343278b398a417d9ef.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Book Cabs Nearby at Best Price | Hire Taxi Nearby Online at Olacabs.com' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="103, 588, 519, 24" ElementType="Text" FriendlyName="'Comfy hatchbacks'" FullSelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME-LOCAL' /&gt;&lt;webctrl shadowhostid='' tag='OLA-CABS' /&gt;&lt;webctrl css-selector='div&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' shadowhostid='' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME-LOCAL' /&gt;&lt;webctrl shadowhostid='' tag='OLA-CABS' /&gt;&lt;webctrl type='' isleaf='1' shadowhostid='' tag='DIV' class='desc' aaname='                             Comfy hatchbacks at pocket-friendly fares                         ' check:innerText='Comfy hatchbacks at pocket-friendly fares' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <uix:NGetText.Text>
+                        <OutArgument x:TypeArguments="x:String">[mini]</OutArgument>
+                      </uix:NGetText.Text>
+                    </uix:NGetText>
+                    <uix:NGetText DelayBefore="2" DisplayName="Get Text  sedan" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="62179bf1-6f90-46a9-90b4-06b39ba44ef9" Version="V1">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://book.olacabs.com/?pickup_name=6P25%2B3Q%20Bengaluru%2C%20Karnataka%20India&amp;lat=13.2001875&amp;lng=77.70943749999999&amp;drop_lat=12.9109375&amp;drop_lng=77.6321875&amp;drop_name=WJ6J%2B9V%20Bengaluru%2C%20Karnataka%20India" DesignTimeRectangle="568, 593, 54, 25" ElementType="Text" FriendlyName="'₹1265'" FullSelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME-LOCAL' /&gt;&lt;webctrl shadowhostid='' tag='OLA-CABS' /&gt;&lt;webctrl aaname='₹1265' shadowhostid='' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME-LOCAL' /&gt;&lt;webctrl shadowhostid='' tag='OLA-CABS' /&gt;&lt;webctrl shadowhostid='' tag='SPAN' type='' class='' /&gt;" Guid="05e48f00-c79a-4fe7-958c-20acd4af181d" InformativeScreenshot="f272ca357f0e28c10566a63e797bff22.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Book Cabs Nearby at Best Price | Hire Taxi Nearby Online at Olacabs.com' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="103, 620, 519, 24" ElementType="Text" FriendlyName="'Sedans with'" FullSelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME-LOCAL' /&gt;&lt;webctrl shadowhostid='' tag='OLA-CABS' /&gt;&lt;webctrl css-selector='div&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' isleaf='1' shadowhostid='' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME-LOCAL' /&gt;&lt;webctrl shadowhostid='' tag='OLA-CABS' /&gt;&lt;webctrl type='' class='desc' isleaf='1' shadowhostid='' tag='DIV' aaname='                             Sedans with free wifi and top drivers                         ' check:innerText='Sedans with free wifi and top drivers' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <uix:NGetText.Text>
+                        <OutArgument x:TypeArguments="x:String">[sedan]</OutArgument>
+                      </uix:NGetText.Text>
+                    </uix:NGetText>
+                    <uix:NGetText DelayBefore="2" DisplayName="Get Text 'suv'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="62179bf1-6f90-46a9-90b4-06b39ba44ef9" Version="V1">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://book.olacabs.com/?pickup_name=6P25%2B3Q%20Bengaluru%2C%20Karnataka%20India&amp;lat=13.2001875&amp;lng=77.70943749999999&amp;drop_lat=12.9109375&amp;drop_lng=77.6321875&amp;drop_name=WJ6J%2B9V%20Bengaluru%2C%20Karnataka%20India" DesignTimeRectangle="568, 771, 54, 25" ElementType="Text" FriendlyName="'₹1642'" FullSelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME-LOCAL' /&gt;&lt;webctrl shadowhostid='' tag='OLA-CABS' /&gt;&lt;webctrl aaname='₹1642' shadowhostid='' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME-LOCAL' /&gt;&lt;webctrl shadowhostid='' tag='OLA-CABS' /&gt;&lt;webctrl shadowhostid='' tag='SPAN' type='' class='' /&gt;" Guid="50507947-970d-427c-88ca-5a10379be7d7" InformativeScreenshot="85aac551ca4b60bda60037705742e673.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Book Cabs Nearby at Best Price | Hire Taxi Nearby Online at Olacabs.com' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="103, 797, 519, 24" ElementType="Text" FriendlyName="'SUVs with'" FullSelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME-LOCAL' /&gt;&lt;webctrl shadowhostid='' tag='OLA-CABS' /&gt;&lt;webctrl css-selector='div&amp;gt;div&amp;gt;div&amp;gt;div' idx='7' isleaf='1' shadowhostid='' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='OLA-APP' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME' /&gt;&lt;webctrl shadowhostid='' tag='OLA-HOME-LOCAL' /&gt;&lt;webctrl shadowhostid='' tag='OLA-CABS' /&gt;&lt;webctrl type='' class='desc' isleaf='1' shadowhostid='' tag='DIV' aaname='                             SUVs with free wifi and top drivers                         ' check:innerText='SUVs with free wifi and top drivers' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <uix:NGetText.Text>
+                        <OutArgument x:TypeArguments="x:String">[suv]</OutArgument>
+                      </uix:NGetText.Text>
+                    </uix:NGetText>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;mini: &quot;+mini+&quot; sedan: &quot;+sedan+&quot; suv: &quot;+suv]" />
+                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="333.6,82.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://book.olacabs.com/" Version="V1" />
+                    <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Object">[row("Aggregator")]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Object">["Ola"]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Object">[row("Mini")]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Object">[mini]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Object">[row("Sedan")]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Object">[sedan]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Object">[row("Prime SUV")]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Object">[suv]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="52730382de80dfe38288477e9fb60840.png" Selector="&lt;html app='chrome.exe' title='Book Cabs Nearby at Best Price | Hire Taxi Nearby Online at Olacabs.com' /&gt;" Url="https://book.olacabs.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="508.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;ola data extraction completed&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="508.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;writing ola data to excel&quot;]" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="508.8,290.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="dependancy\output\Route Tracker-Output.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelWriteRange AddHeaders="True" DataTable="[inola]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Output - Ola" StartingCell="A1" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="508.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;successfully completed - ola &quot;]" />
+  </Sequence>
+</Activity>
